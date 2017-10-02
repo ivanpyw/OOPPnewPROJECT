@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-# from firebase import firebase
+# from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 
 
 app = Flask(__name__)
@@ -10,6 +10,10 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('home.html')
+
+@app.route('/createbook')
+def create_book():
+    return render_template('create_book.html')
 
 
 if __name__ == '__main__':
