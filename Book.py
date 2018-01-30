@@ -1,43 +1,37 @@
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import db
+from Publication import Publication
 
-cred = credentials.Certificate("../secret/firebase.json")
 
-firebase_admin.initialize_app(cred, {
-    'databaseURL' : 'https://librarysystem-93143.firebaseio.com/'
-})
+class Book(Publication):
+    def __init__(self, title, publisher, status, created_by, category, type, synopsis, author, isbnno):
+        Publication.__init__(self, title, publisher, status, created_by, category, type)
+        self.__synopsis = synopsis
+        self.__author = author
+        self.__isbnno = isbnno
 
-root = db.reference('books')
+    #getters
 
-class Book:
+    def get_synopsis(self):
+        return self.__synopsis
 
-    def __init__(self, isbn_no, title, author_name, genre, publisher, published_date, synopsis, price, status,
-                 created_by, create_date):
-        self.isbn_no = isbn_no
-        self.title = title
-        self.author_name = author_name
-        self.genre = genre
-        self.publisher = publisher
-        self.published_date = published_date
-        self.synopsis = synopsis
-        self.price = price
-        self.status = status
-        self.created_by = created_by
-        self.create_date = create_date
+    def get_author(self):
+        return self.__author
 
-    def retrieve_book_by_isbn(self,isbn):
-        pass
+    def get_isbnno(self):
+        return self.__author
 
-    def save_book(self, aBook):
-        pass
+    #setters
 
-    def delete_book(self, isbn):
-        pass
+    def set_synopsis(self, synopsis):
+        self.__synopsis = synopsis
 
-    def update_book(self, aBook):
-        pass
+    def set_author(self, author):
+        self.__author = author
 
-    def retrieve_all_books(self):
-        pass
+
+    def set_isbnno(self, isbnno):
+        self.__isbnno = isbnno
+
+
+
+
 
