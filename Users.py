@@ -37,4 +37,3 @@ class Users:
 
     def set_dob(self, dob):
         self.__dob = dob
-

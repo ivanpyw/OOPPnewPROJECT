@@ -23,4 +23,3 @@ class StaffU:
 
     def set_password(self, password):
         self.__password = password
-

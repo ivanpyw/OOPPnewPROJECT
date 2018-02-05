@@ -1,15 +1,16 @@
 from flask import Flask, render_template, request, flash, redirect, url_for, session
 from wtforms import Form, StringField, TextAreaField, RadioField, SelectField, validators, PasswordField
-from Magazine import Magazine
-from Book import Book
+
 from Users import Users
 import firebase_admin
 from firebase_admin import credentials, db
 from StaffU import StaffU
+from Create_request import CreateRequest
 from descbill import Descbill
+from datetime import datetime
 # from passlib.hash import sha256_crypt #need to pip install passlib on the command prompt
 
-cred = credentials.Certificate('cred/stop-78245-firebase-adminsdk-jqcbt-032e64dc12.json')
+cred = credentials.Certificate('cred/stop-78245-firebase-adminsdk-jqcbt-d793e7c23d.json')
 default_app = firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://stop-78245.firebaseio.com/'
 
@@ -38,8 +39,6 @@ def bill():
         # print(bill.get_product())
         list.append(bill)
     return render_template('bill.html', listofp=list)
-
-
 
 class StaffLogin(Form):
     staffid = StringField('Staff id', [validators.DataRequired()])
@@ -153,7 +152,7 @@ def register_user():
         # email = form.email.data
         dob = form.dob.data
 
-        ifUserExists = root.child('messages').order_by_child('username').equal_to(nric).get()
+        ifUserExists = root.child('patientacc').order_by_child('username').equal_to(nric).get()
 
         print(ifUserExists)
 
@@ -185,6 +184,127 @@ def register_user():
 
     else:
         return render_template('Register.html', form=form)
+
+class Request(Form):
+    drinks=SelectField('Drinks',
+                              choices=[('', 'Select'), ('Warm Water', 'Warm Water'),
+                                       ('Cold Water', 'Cold Water'),
+                                       ('Milo', 'Milo'), ('Green Tea', 'Green Tea')], default='')
+
+    food=SelectField('Food',
+                              choices=[('', 'Select'), ('Chicken Porridge', 'Chicken Porridge'),
+                                       ('Vegetarian Rice', 'Vegetarian Rice'),
+                                       ('Steamed Bun', 'Steamed Bun')], default='')
+
+    assistance=SelectField('Assistance',
+                              choices=[( '', 'Select'), ('Bathing Service', "Bathing Service"),
+                                       ('Toilet Assistance', 'Toilet Assistance'),
+                                       ('Outdoor Personal Assistant', 'Outdoor Personal Assistant')], default='')
+
+    emergency=SelectField('Emergency',
+                                    choices=[('','Select'),('PAIN', 'Im in great pain'), ('Urgent Leave Required', "Urgent reason to leave the hospital")], default='')
+
+
+    other=StringField('Other', default='')
+
+
+
+@app.route('/request_help', methods=['GET', 'POST'])
+def requesthelppage():
+    form = Request(request.form)
+
+    if request.method == 'POST' and form.validate():
+
+        status= 1
+        NRIC = session['nric']
+        DatePublished = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        drinks = form.drinks.data
+        food = form.food.data
+        assistance = form.assistance.data
+        other = form.other.data
+        emergency= form.emergency.data
+        # password = sha256_crypt.encrypt(str(form.password.data)) #encryption
+
+        # ifUserExists = root.child('request').order_by_child('NRIC').equal_to(NRIC).get()
+        #
+        # print(ifUserExists)
+        #
+        # # for k, v in ifUserExists.items():
+        # #     print(ifUserExists.items())
+        # #     print(k, v)
+        # #     print(session['nric'])
+
+        user = CreateRequest(drinks, food, assistance, other, DatePublished, NRIC, status, emergency)
+        user_db = root.child('request/')
+
+        user_db.push(
+            {
+                'emergency': user.get_emergency(),
+                'status': user.get_status(),
+                'NRIC': user.get_NRIC(),
+                'DatePublished': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                'drinks': user.get_drinks(),
+                'food': user.get_food(),
+                'assistance': user.get_assistance(),
+                'other': user.get_other(),
+            }
+        )
+
+        flash('Request Sent.', 'success')
+        return redirect(url_for('home'))
+
+    else:
+        return render_template('Request_help.html', form=form)
+
+    return render_template('Request_help.html', form=form)
+
+
+@app.route('/request_help/<string:id>', methods=['GET', 'POST'])
+def updaterequestpage(id):
+    form = Request(request.form)
+
+    if request.method == 'POST' and form.validate():
+
+        status= 1
+        NRIC = session['nric']
+        DatePublished = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        drinks = form.drinks.data
+        food = form.food.data
+        assistance = form.assistance.data
+        other = form.other.data
+        emergency= form.emergency.data
+        # password = sha256_crypt.encrypt(str(form.password.data)) #encryption
+
+        # ifUserExists = root.child('request').order_by_child('NRIC').equal_to(NRIC).get()
+        #
+        # print(ifUserExists)
+        #
+        # # for k, v in ifUserExists.items():
+        # #     print(ifUserExists.items())
+        # #     print(k, v)
+        # #     print(session['nric'])
+
+        user = CreateRequest(drinks, food, assistance, other, DatePublished, NRIC, status, emergency)
+        user_db = root.child('request/'+ id)
+
+        user_db.set(
+            {
+                'emergency': user.get_emergency(),
+                'status': user.get_status(),
+                'NRIC': user.get_NRIC(),
+                'DatePublished': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                'drinks': user.get_drinks(),
+                'food': user.get_food(),
+                'assistance': user.get_assistance(),
+                'other': user.get_other(),
+            }
+        )
+
+        flash('Request Sent.', 'success')
+        return render_template('Request_help.html', form=form)
+    return redirect(url_for('home'))
+
+
 
 
 
@@ -236,13 +356,62 @@ class RequiredIf(object):
                     validators.Optional().__call__(form, field)
 
 
-@app.route('/delete_publication/<string:id>', methods=['POST'])
-def delete_publication(id):
-    mag_db = root.child('publications/' + id)
-    mag_db.delete()
-    flash('Article Deleted', 'success')
+@app.route('/viewrequest/<string:id>', methods=['POST'])
+def viewrequestform(id):
+    user_db = root.child('request/'+ id)
+    user_db.delete()
+    flash('Request Deleted', 'success')
 
-    return redirect(url_for('viewpublications'))
+    return redirect(url_for('listofrequest'))
+
+@app.route('/current_request/<string:id>', methods=['POST'])
+def deleterequestform(id):
+    user_db = root.child('request/'+ id)
+    user_db.delete()
+    flash('Request Deleted', 'success')
+
+    return redirect(url_for('specificrequest'))
+
+@app.route("/current_request")
+def specificrequest():
+    listofcurrent = root.child('request').get()
+    list = []
+    if listofcurrent == None:
+        flash('no current requests made by this user', 'success')
+        return render_template('home.html')
+    else:
+        for pubid in listofcurrent:
+            eachupdate = listofcurrent[pubid]
+            if eachupdate["NRIC"]== session['nric']:
+                currentrequest = CreateRequest(eachupdate['drinks'], eachupdate['food'], eachupdate['assistance'],
+                                             eachupdate['other'], eachupdate['DatePublished'], eachupdate['NRIC'],
+                                             eachupdate['status'], eachupdate['emergency'])
+                currentrequest.set_pubid(pubid)
+                print(currentrequest.get_pubid())
+                list.append(currentrequest)
+                print(list)
+            else:
+                pass
+    return render_template('currentrequest.html', listofcurrent=list)
+
+@app.route('/viewrequest')
+def listofrequest():
+    listofrequest = root.child('request').get()
+    list = []
+    if listofrequest== None:
+        flash('There are no requests for now', 'success')
+        return render_template('viewrequestempty.html')
+    else:
+        for pubid in listofrequest:
+            eachupdate = listofrequest[pubid]
+            storerequest = CreateRequest( eachupdate['drinks'], eachupdate['food'], eachupdate['assistance'], eachupdate['other'], eachupdate['DatePublished'], eachupdate['NRIC'], eachupdate['status'], eachupdate['emergency'])
+            storerequest.set_pubid(pubid)
+            print(storerequest.get_pubid())
+            list.append(storerequest)
+            print(list)
+        return render_template('viewrequest.html', listofrequest=list)
+
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -263,6 +432,7 @@ def login():
             if nric == v['nric'] and  password == v['password']:
                 session['logged_in'] = True
                 session['nric'] = nric
+                print(nric)
                 # session['password'] = password
                 return redirect(url_for('afterLog'))
             else:
@@ -272,6 +442,7 @@ def login():
     else:
         return render_template('Login.html', form=form)
     return render_template('Login.html',form=form)
+
 
 
 @app.route('/logout')
@@ -284,187 +455,72 @@ class LoginForm(Form):
     nric = StringField('Nric', [validators.DataRequired()])
     password = PasswordField('Password', [validators.DataRequired()])
 
-# class PublicationForm(Form):
-#     title = StringField('Title', [
-#         validators.Length(min=1, max=150),
-#         validators.DataRequired()])
-#     pubtype = RadioField('Type Of Publication', choices=[('sbook', 'Book'), ('smag', 'Magazine')], default='sbook')
-#     category = SelectField('Caterory', [validators.DataRequired()],
-#                            choices=[('', 'Select'), ('FANTASY', 'Fantasy'), ('FASHION', 'Fashion'),
-#                                     ('THRILLER', 'Thriller'), ('CRIME', 'Crime'), ('BUSINESS', 'Business')],
-#                            default='')
-#     publisher = StringField('Publisher', [
-#         validators.Length(min=1, max=100),
-#         validators.DataRequired()])
-#     status = SelectField('Status', [validators.DataRequired()],
-#                          choices=[('', 'Select'), ('P', 'Pending'), ('A', 'Available For Borrowing'),
-#                                   ('R', 'Only For Reference')], default='')
-#     isbn = StringField('ISBN No', [validators.Length(min=1, max=100), RequiredIf(pubtype='sbook')])
-#     author = StringField('Author', [
-#         validators.Length(min=1, max=100),
-#         RequiredIf(pubtype='sbook')])
-#     synopsis = TextAreaField('Synopsis', [
-#         RequiredIf(pubtype='sbook')])
-#     frequency = RadioField('Frequency', [RequiredIf(pubtype='smag')],
-#                            choices=[('D', 'Daily'), ('W', 'Weekly'), ('M', 'Monthly')])
 
-#
-# @app.route('/newpublication', methods=['GET', 'POST'])
-# def new():
-#     form = PublicationForm(request.form)
-#     if request.method == 'POST' and form.validate():
-#         if  form.pubtype.data == 'smag':
-#             title = form.title.data
-#             type = form.pubtype.data
-#             category = form.category.data
-#             status = form.status.data
-#             frequency = form.frequency.data
-#             publisher = form.publisher.data
-#             created_by = "U0001" # hardcoded value
-#
-#             mag = Magazine(title, publisher, status, created_by, category, type, frequency)
-#
-#
-#             #create the magazine object
-#             mag_db = root.child('publications')
-#             mag_db.push({
-#                     'title': mag.get_title(),
-#                     'type': mag.get_type(),
-#                     'category': mag.get_category(),
-#                     'status': mag.get_status(),
-#                     'frequency': mag.get_frequency(),
-#                     'publisher': mag.get_publisher(),
-#                     'created_by': mag.get_created_by(),
-#                     'create_date': mag.get_created_date()
-#             })
-#
-#             flash('Magazine Inserted Sucessfully.', 'success')
-#
-#         elif form.pubtype.data == 'sbook':
-#             title = form.title.data
-#             type = form.pubtype.data
-#             category = form.category.data
-#             status = form.status.data
-#             isbn = form.isbn.data
-#             author = form.author.data
-#             synopsis = form.synopsis.data
-#             publisher = form.publisher.data
-#             created_by = "U0001"  # hardcoded value
-#
-#             book = Book(title, publisher, status, created_by, category, type, synopsis, author, isbn)
-#             mag_db = root.child('publications')
-#             mag_db.push({
-#                 'title': book.get_title(),
-#                 'type': book.get_type(),
-#                 'category': book.get_category(),
-#                 'status': book.get_status(),
-#                 'author': book.get_author(),
-#                 'publisher': book.get_publisher(),
-#                 'isbn': book.get_isbnno(),
-#                 'synopsis': book.get_synopsis(),
-#                 'created_by': book.get_created_by(),
-#                 'create_date': book.get_created_date()
-#             })
-#
-#             flash('Book Inserted Sucessfully.', 'success')
-#
-#         return redirect(url_for('viewpublications'))
-#
-#
-#     return render_template('create_publication.html', form=form)
 
-# @app.route('/update/<string:id>/', methods=['GET', 'POST'])
-# def update_publication(id):
-#     form = PublicationForm(request.form)
-#
-#     if request.method == 'POST' and form.validate():
-#         if form.pubtype.data == 'smag':
-#             title = form.title.data
-#             type = form.pubtype.data
-#             category = form.category.data
-#             status = form.status.data
-#             frequency = form.frequency.data
-#             publisher = form.publisher.data
-#             created_by = "U0001"  # hardcoded value
-#
-#             mag = Magazine(title, publisher, status, created_by, category, type, frequency)
-#
-#             # create the magazine object
-#             mag_db = root.child('publications/' + id)
-#             mag_db.set({
-#                     'title': mag.get_title(),
-#                     'type': mag.get_type(),
-#                     'category': mag.get_category(),
-#                     'status': mag.get_status(),
-#                     'frequency': mag.get_frequency(),
-#                     'publisher': mag.get_publisher(),
-#                     'created_by': mag.get_created_by(),
-#                     'create_date': mag.get_created_date()
-#             })
-#
-#             flash('Magazine Updated Sucessfully.', 'success')
-#
-#         elif form.pubtype.data == 'sbook':
-#             title = form.title.data
-#             type = form.pubtype.data
-#             category = form.category.data
-#             status = form.status.data
-#             isbn = form.isbn.data
-#             author = form.author.data
-#             synopsis = form.synopsis.data
-#             publisher = form.publisher.data
-#             created_by = "U0001"  # hardcoded value
-#
-#             book = Book(title, publisher, status, created_by, category, type, synopsis, author, isbn)
-#             mag_db = root.child('publications/' + id)
-#             mag_db.set({
-#                 'title': book.get_title(),
-#                 'type': book.get_type(),
-#                 'category': book.get_category(),
-#                 'status': book.get_status(),
-#                 'author': book.get_author(),
-#                 'publisher': book.get_publisher(),
-#                 'isbn': book.get_isbnno(),
-#                 'synopsis': book.get_synopsis(),
-#                 'created_by': book.get_created_by(),
-#                 'create_date': book.get_created_date()
-#             })
-#
-#             flash('Book Updated Successfully.', 'success')
-#
-#         return redirect(url_for('viewpublications'))
-#
-#     else:
-#         url = 'publications/' + id
-#         eachpub = root.child(url).get()
-#
-#         if eachpub['type'] == 'smag':
-#             magazine = Magazine(eachpub['title'], eachpub['publisher'], eachpub['status'],
-#                                 eachpub['created_by'], eachpub['category'], eachpub['type'],
-#                                 eachpub['frequency'])
-#
-#             magazine.set_pubid(id)
-#             form.title.data = magazine.get_title()
-#             form.pubtype.data = magazine.get_type()
-#             form.category.data = magazine.get_category()
-#             form.publisher.data =  magazine.get_publisher()
-#             form.status.data =  magazine.get_status()
-#             form.frequency.data = magazine.get_frequency()
-#         elif eachpub['type'] == 'sbook':
-#             book = Book(eachpub['title'], eachpub['publisher'], eachpub['status'],
-#                         eachpub['created_by'], eachpub['category'], eachpub['type'],
-#                         eachpub['synopsis'], eachpub['author'], eachpub['isbn'])
-#             book.set_pubid(id)
-#             form.title.data = book.get_title()
-#             form.pubtype.data = book.get_type()
-#             form.category.data = book.get_category()
-#             form.publisher.data = book.get_publisher()
-#             form.status.data = book.get_status()
-#             form.synopsis.data = book.get_synopsis()
-#             form.author.data = book.get_author()
-#             form.isbn.data = book.get_isbnno()
-#
-#         return render_template('update_publication.html', form=form)
+@app.route("/request_help/<string:id>", methods=['GET', 'POST'])
+def update_request(id):
+    form = Request(request.form)
+    if request.method == "POST" and form.validate():
+        status = 1
+        NRIC = session['nric']
+        DatePublished = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        drinks = form.drinks.data
+        food = form.food.data
+        assistance = form.assistance.data
+        other = form.other.data
+        emergency = form.emergency.data
+
+        updaterq = CreateRequest(drinks, food, assistance, other, DatePublished, NRIC, status, emergency)
+        if request.method == "POST":
+            updaterq_db= root.child("request/" + id)
+            updaterq_db.set({
+                "NRIC":session["nric"],
+                "status":updaterq.get_status(),
+                "DatePublished":datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                "assistance":updaterq.get_assistance(),
+                "drinks":updaterq.get_drinks(),
+                "food":updaterq.get_food(),
+                "emergency":updaterq.get_emergency(),
+                "other":updaterq.get_other(),
+                })
+            flash('Request update.', 'success')
+            return redirect(url_for('updaterequestpage'))
+
+        return render_template('home.html')
+
+@app.route("/viewrequest/<string:id>", methods=['GET', 'POST'])
+def update_status(id):
+    form = Request(request.form)
+    if request.method == "POST" and form.validate():
+        status = 2
+        updaterq = CreateRequest(status)
+        if request.method == "POST":
+            updaterq_db= root.child("request/" + id)
+            updaterq_db.set({
+                "status":updaterq.get_status(),
+                })
+            flash('Request update.', 'success')
+            return redirect(url_for('listofrequest'))
+
+        return render_template('home.html')
+
+# @app.route('/viewrequest/<string:id>/', methods=['GET', 'POST'])
+# def update_request(id):
+#     if request.method == "POST":
+#         if request.form["taken"] == "Interested?":
+#             status = "Taken"
+#             ride = root.child("listofridesp/" + id)
+#             ride.set({
+#                 "Starting position": from_where,
+#                 "Destination": to_where,
+#                 "date": date,
+#                 "sessionemail": "sessionemail",
+#                 "time": time,
+#                 "usertype": userid,
+#                 "schedule": schedule,
+#                 "status": "Taken"})
+#             return redirect(url_for("listofridesD"))
+
 
 if __name__ == '__main__':
     app.secret_key = 'secret123'
