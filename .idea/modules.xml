@@ -3,12 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/LibrarySystem.iml" filepath="$PROJECT_DIR$/.idea/LibrarySystem.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../nat LibrarySystem/.idea/LibrarySystem 4.iml" filepath="$PROJECT_DIR$/../nat LibrarySystem/.idea/LibrarySystem 4.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../OOPP Project/.idea/OOPPPROJECT.iml" filepath="$PROJECT_DIR$/../OOPP Project/.idea/OOPPPROJECT.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../ayuupdatelibsys/.idea/ayuupdatelibsys.iml" filepath="$PROJECT_DIR$/../ayuupdatelibsys/.idea/ayuupdatelibsys.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../LibrarySystem Luqman Version/.idea/demo.iml" filepath="$PROJECT_DIR$/../LibrarySystem Luqman Version/.idea/demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../firebasecontact-master/.idea/firebasecontact-master.iml" filepath="$PROJECT_DIR$/../firebasecontact-master/.idea/firebasecontact-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../retrieve_checkedbox/.idea/retrieve_checkedbox.iml" filepath="$PROJECT_DIR$/../retrieve_checkedbox/.idea/retrieve_checkedbox.iml" />
     </modules>
   </component>
 </project>

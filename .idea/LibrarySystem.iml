@@ -4,12 +4,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Python 3.6.3 (C:\Users\ivanp\AppData\Local\Programs\Python\Python36-32\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="retrieve_checkedbox" />
-    <orderEntry type="module" module-name="firebasecontact-master" />
-    <orderEntry type="module" module-name="OOPPPROJECT" />
-    <orderEntry type="module" module-name="demo" />
-    <orderEntry type="module" module-name="LibrarySystem 4" />
-    <orderEntry type="module" module-name="ayuupdatelibsys" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />

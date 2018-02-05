@@ -1,198 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9da74363-5b7c-4f68-aeb9-82f406daa839" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nat LibrarySystem/Symptom.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nat LibrarySystem/templates/includes/_formhelper.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nat LibrarySystem/templates/includes/_message.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nat LibrarySystem/templates/update_publication.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../nat LibrarySystem/templates/view_all_publications.html" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/.idea/OOPPPROJECT.iml" afterPath="$PROJECT_DIR$/../OOPP Project/.idea/OOPPPROJECT.iml" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/.idea/modules.xml" afterPath="$PROJECT_DIR$/../OOPP Project/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/.idea/vcs.xml" afterPath="$PROJECT_DIR$/../OOPP Project/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/Healthcare.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/Procfile" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/Request.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/medicine.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/meds.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/oopp-project-firebase-adminsdk-i1rri-062b3fbc86.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/requirements.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/right-sidebar.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/CSS/animate.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/CSS/boostrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/CSS/bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/CSS/easy-responsive-tabs.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/CSS/loginStyle.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/CSS/magnific-popup.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/CSS/megafish.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/CSS/menu_slideside.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/CSS/owl.carousel.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/CSS/owl.theme.default.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/CSS/responsive.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/CSS/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/CSS/superfish.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/CSS/themify-icons.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/Image/image_1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/Image/image_2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/Image/img_large_1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/Image/img_large_2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/Image/img_large_3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/Image/img_large_4.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/Image/img_large_5.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/Image/img_large_6.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/Image/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/Image/logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/Image/slide_2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/bootstrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/changecolour.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/easyResponsiveTabs.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/fastclick.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/hoverIntent.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/inview.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/jquery-1.10.2.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/jquery.easing.1.3.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/jquery.magnific-popup.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/jquery.waypoints.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/logmain.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/logutfunc.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/meds.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/modernizr-2.6.2.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/owl.carousel.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/respond.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/superfish.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/JS/supersubs.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/_bootstrap-compass.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/_bootstrap-mincer.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/_bootstrap-sprockets.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/alerts.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/badges.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/breadcrumbs.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/button-groups.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/buttons.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/carousel.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/close.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/code.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/component-animations.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/dropdowns.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/forms.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/glyphicons.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/grid.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/input-groups.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/jumbotron.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/labels.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/list-group.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/media.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/alerts.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/background-variant.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/border-radius.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/buttons.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/center-block.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/clearfix.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/forms.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/gradients.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/grid-framework.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/grid.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/hide-text.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/image.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/labels.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/list-group.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/nav-divider.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/nav-vertical-align.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/opacity.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/pagination.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/panels.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/progress-bar.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/reset-filter.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/resize.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/responsive-visibility.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/size.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/tab-focus.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/table-row.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/text-emphasis.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/text-overflow.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/mixins/vendor-prefixes.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/modals.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/navbar.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/navs.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/normalize.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/pager.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/pagination.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/panels.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/popovers.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/print.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/progress-bars.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/responsive-embed.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/responsive-utilities.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/scaffolding.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/tables.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/theme.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/thumbnails.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/tooltip.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/type.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/utilities.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/variables.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/bootstrap/wells.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/static/sass/style.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/stop-78245-firebase-adminsdk-jqcbt-032e64dc12.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/Monitoring.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/afterstafflogin.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/aftersubmitbill.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/bills.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/contact.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/elements.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/form.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/includes/_formhelper.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/left-sidebar.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/login.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/register.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/right-sidebar.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/services.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../OOPP Project/templates/symptoms.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/LibrarySystem.iml" afterPath="$PROJECT_DIR$/.idea/LibrarySystem.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="9da74363-5b7c-4f68-aeb9-82f406daa839" name="Default" comment="mother fucking sharlene">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Book.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/LibrarySystem.py" afterPath="$PROJECT_DIR$/LibrarySystem.py" />
-      <change beforePath="$PROJECT_DIR$/Magazine.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Publication.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/StaffU.py" afterPath="$PROJECT_DIR$/StaffU.py" />
-      <change beforePath="$PROJECT_DIR$/Users.py" afterPath="$PROJECT_DIR$/Users.py" />
-      <change beforePath="$PROJECT_DIR$/templates/Login.html" afterPath="$PROJECT_DIR$/templates/Login.html" />
-      <change beforePath="$PROJECT_DIR$/templates/Register.html" afterPath="$PROJECT_DIR$/templates/Register.html" />
-      <change beforePath="$PROJECT_DIR$/templates/StaffLog.html" afterPath="$PROJECT_DIR$/templates/StaffLog.html" />
-      <change beforePath="$PROJECT_DIR$/templates/create_publication.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/templates/home.html" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/_formhelper.html" afterPath="$PROJECT_DIR$/templates/includes/_formhelper.html" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/_message.html" afterPath="$PROJECT_DIR$/templates/includes/_message.html" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/_navbar.html" afterPath="$PROJECT_DIR$/templates/includes/_navbar.html" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html" afterPath="$PROJECT_DIR$/templates/layout.html" />
-      <change beforePath="$PROJECT_DIR$/templates/staffreg.html" afterPath="$PROJECT_DIR$/templates/staffreg.html" />
-      <change beforePath="$PROJECT_DIR$/templates/update_publication.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/view_all_publications.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/.idea/LibrarySystem.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/.idea/misc.xml" afterPath="$PROJECT_DIR$/../nat LibrarySystem/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/.idea/modules.xml" afterPath="$PROJECT_DIR$/../nat LibrarySystem/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../nat LibrarySystem/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/Book.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/LibrarySystem.py" afterPath="$PROJECT_DIR$/../nat LibrarySystem/LibrarySystem.py" />
-      <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/data.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/Symptom.py" afterPath="$PROJECT_DIR$/../nat LibrarySystem/Symptom.py" />
       <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/static/css/footer.css" afterPath="$PROJECT_DIR$/../nat LibrarySystem/static/css/footer.css" />
       <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/templates/create_publication.html" afterPath="$PROJECT_DIR$/../nat LibrarySystem/templates/create_publication.html" />
       <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/templates/home.html" afterPath="$PROJECT_DIR$/../nat LibrarySystem/templates/home.html" />
       <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/templates/includes/_footer.html" afterPath="$PROJECT_DIR$/../nat LibrarySystem/templates/includes/_footer.html" />
       <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/templates/includes/_navbar.html" afterPath="$PROJECT_DIR$/../nat LibrarySystem/templates/includes/_navbar.html" />
       <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/templates/layout.html" afterPath="$PROJECT_DIR$/../nat LibrarySystem/templates/layout.html" />
+      <change beforePath="$PROJECT_DIR$/../nat LibrarySystem/templates/update_publication.html" afterPath="$PROJECT_DIR$/../nat LibrarySystem/templates/update_publication.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -235,7 +53,7 @@
             <entry file="file://$PROJECT_DIR$/templates/Request_help.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="594">
-                  <caret line="178" column="8" lean-forward="true" selection-start-line="178" selection-start-column="8" selection-end-line="178" selection-end-column="8" />
+                  <caret line="178" column="8" lean-forward="false" selection-start-line="178" selection-start-column="8" selection-end-line="178" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
@@ -244,8 +62,18 @@
           <file leaf-file-name="LibrarySystem.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/LibrarySystem.py">
               <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="8338">
+                  <caret line="388" column="47" lean-forward="false" selection-start-line="388" selection-start-column="47" selection-end-line="389" selection-end-column="49" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="descbill.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/descbill.py">
+              <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="352">
-                  <caret line="384" column="47" lean-forward="false" selection-start-line="384" selection-start-column="47" selection-end-line="384" selection-end-column="47" />
+                  <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="26" />
                   <folding />
                 </state>
               </provider>
@@ -457,11 +285,6 @@
               <item name="OOPPnewPROJECT" type="b2602c69:ProjectViewProjectNode" />
               <item name="OOPPnewPROJECT" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="OOPPnewPROJECT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OOPPnewPROJECT" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -548,44 +371,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="ADDITIONAL_ARGS" value="" />
     </configuration>
-    <configuration name="LibrarySystem (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$ Luqman Version" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="demo" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$ Luqman Version/LibrarySystem.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="LibrarySystem (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../nat LibrarySystem" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="LibrarySystem 4" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../nat LibrarySystem/LibrarySystem.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="LibrarySystem" type="PythonConfigurationType" factoryName="Python" singleton="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -600,25 +385,6 @@
       <module name="LibrarySystem" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LibrarySystem.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="s" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../retrieve_checkedbox" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="retrieve_checkedbox" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../retrieve_checkedbox/s.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -701,6 +467,25 @@
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
     </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LibrarySystem 4" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -717,21 +502,61 @@
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <list size="6">
+    <configuration default="true" type="tests" factoryName="Twisted Trial">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LibrarySystem 4" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LibrarySystem 4" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LibrarySystem 4" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.LibrarySystem" />
-      <item index="1" class="java.lang.String" itemvalue="Python.LibrarySystem (1)" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.viewrequest.html" />
-      <item index="3" class="java.lang.String" itemvalue="Python.s" />
-      <item index="4" class="java.lang.String" itemvalue="Python.LibrarySystem (2)" />
-      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.update_publication.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.viewrequest.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.update_publication.html" />
     </list>
     <recent_temporary>
-      <list size="5">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.update_publication.html" />
-        <item index="1" class="java.lang.String" itemvalue="Python.LibrarySystem (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.s" />
-        <item index="3" class="java.lang.String" itemvalue="Python.LibrarySystem (1)" />
-        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.viewrequest.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.viewrequest.html" />
       </list>
     </recent_temporary>
   </component>
@@ -749,6 +574,21 @@
       <option name="presentableId" value="Default" />
       <updated>1513157325462</updated>
     </task>
+    <task id="LOCAL-00001" summary="mother fucking sharlene">
+      <created>1517832553374</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1517832553374</updated>
+    </task>
+    <task id="LOCAL-00002" summary="mother fucking sharlene">
+      <created>1517832645326</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1517832645326</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -790,6 +630,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="mother fucking sharlene" />
+    <option name="LAST_COMMIT_MESSAGE" value="mother fucking sharlene" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -960,14 +804,6 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa11212.9691/LibrarySystem orignal.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa13504.948/LibrarySystem orignal.py" />
-    <entry file="file://$PROJECT_DIR$/descbill.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/viewrequestempty.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
@@ -1107,7 +943,7 @@
     <entry file="file://$PROJECT_DIR$/templates/Request_help.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
-          <caret line="178" column="8" lean-forward="true" selection-start-line="178" selection-start-column="8" selection-end-line="178" selection-end-column="8" />
+          <caret line="178" column="8" lean-forward="false" selection-start-line="178" selection-start-column="8" selection-end-line="178" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1120,10 +956,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LibrarySystem.py">
+    <entry file="file://$PROJECT_DIR$/descbill.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="384" column="47" lean-forward="false" selection-start-line="384" selection-start-column="47" selection-end-line="384" selection-end-column="47" />
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LibrarySystem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8338">
+          <caret line="388" column="47" lean-forward="false" selection-start-line="388" selection-start-column="47" selection-end-line="389" selection-end-column="49" />
           <folding />
         </state>
       </provider>
